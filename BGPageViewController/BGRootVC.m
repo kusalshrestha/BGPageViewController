@@ -122,7 +122,10 @@
         textColor = [UIColor blueColor];
     }
     
-    BGDetailVC *dataViewController      = [self viewControllerAtIndex:currentIndex-1 storyboard:self.storyboard];
+//    UIViewController * viewController = [self.pageViewController.viewControllers lastObject];
+    
+    BGDetailVC *dataViewController      = [self.pageViewController.viewControllers lastObject];
+
     dataViewController.textColor = textColor;
     NSArray *viewControllers                    = @[dataViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
